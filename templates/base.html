@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="static\css\stylehome.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9">
+  </script>
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+  <title>Bhartiya airways</title>
+</head>
+
+<body >
+  <div class="ttm-topbar-wrapper ttm-bgcolor-darkgrey d-lg-block d-none ttm-textcolor-white clearfix">
+    <div class="container">
+      <div class="ttm-topbar-content">
+        <ul class="top-contact ttm-highlight-left text-left" style="background-color:#fc0101!important;">
+          <li><i class="fab fa-clock-o"></i><strong>Open Hours:</strong> Mon - Sat 9.00 AM - 06.00 PM</li>
+        </ul>
+        <div class="topbar-right text-end">
+          <ul class="top-contact">
+            <li><i class="fab fa-envelope-o"></i><a href="mailto:hr@bhartiyaairways.com">hr@bhartiyaairways.com</a></li>
+            <li><a href="tel:9204044044"><i class="fa fa-phone"></i>+91-9204044044</a> </li>
+          </ul>
+          <div class="ttm-social-links-wrapper list-inline">
+            <ul class="social-icons" style="list-style-type: none;">
+              <li><a href=""><i class="fab fa-facebook"></i></a>
+              </li>
+              <li><a href="https://twitter.com/BhartiyaAirways"><i class="fab fa-twitter"></i></a>
+              </li>
+              <li><a href="#"><i class="fab fa-instagram"></i></a>
+              </li>
+              <li><a href="https://in.linkedin.com/company/bhartiya-airways"><i class="fab fa-linkedin"></i></a>
+              </li>
+              <li><a href="https://www.youtube.com/channel/UCu1F4UVw_jVkmkVAQur6HVg"><i class="fab fa-youtube"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <nav class="navbar navbar-expand-lg navbar-light  p-0">
+    <div class="container">
+      <a class="navbar-brand p-0" href="#"> <a href="/"><img src="static/images/logo.webp" class="logo " alt="..."></a></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto text-capitalize">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/career">Career</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact_us">Contact us</a>
+          </li>
+        </ul>
+      </div>
+      <div class="ttm-rt-contact">
+        <!-- header-icons -->
+        <div class="ttm-header-icons">
+          <div class="ttm-header-icon ttm-header">
+            <a href="/applynow" class="apply-btn rounded bx-flashing">Apply Now</a>
+          </div>
+        </div><!-- header-icons end -->
+      </div>
+    </div>
+  </nav>
+
+<!-- {% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+        {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}Important: {% endif %}
+        {{ message }}
+    </li>
+    {% endfor %}
+</ul>
+{% endif %}  -->
+
+
+{% load sweetify %}
+{% sweetify %}
+    
+
+<!-- {% if messages %}
+  {% for message in messages %}
+
+<div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+  <strong>Hey </strong> {{message}}
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+    {% endfor %}
+{% endif %} -->
+
+  {%  block body %}
+
+  {% endblock %}
+  <div class="backgound-color-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h3 class="widget">About Bhartiya Airways</h3>
+                <p>
+                    Bhartiya Airways was established to excel in the sector of airways and management services. Back in 2019, With the vision of founder Bhagwanta Singh, Bhartiya Airways started its journey. And in the same year, with the Government of India, we registered ourselves under MCA(Ministry of Corporate Affairs).
+                </p>
+            </div>
+
+            <div class="col-md-4 d-md-flex align-items-md-center flex-md-column">
+                <h3 class="widget-title">Quick Links</h3>
+                <ul id="menu-footer-services" class="footer-services paddingtop">
+                    <li><a href="/contact_us"><i class="la la-angle-double-right"></i>Contact us</a></li>
+                    <li><a href="/career"><i class="las la-angle-double-right"></i>Career</a></li>
+                    <li><a href="/about"><i class="las la-angle-double-right"></i>About Us</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-4">
+                <h3 class="widget-title">Quick Enquiry</h3>
+                <div class="textwidget widget-text">
+                    <ul class="ttm-our-location-list">
+                        <li><i class="fa fa-envelope-o"></i><a href="mailto:jobs@bhartiyaairways.com">Jobs: jobs@bhartiyaairways.com</a></li>
+                        <li><i class="fa fa-envelope-o"></i><a href="mailto:hr@bhartiyaairways.com">HR: hr@bhartiyaairways.com</a></li>
+                        <li><i class="fa fa-envelope-o"></i><a href="mailto:info@bhartiyaairways.com">Business: info@bhartiyaairways.com</a></li>
+                        <li><i class="fa fa-envelope-o"></i><a href="mailto:career@bhartiyaairways.com">Career: career@bhartiyaairways.com</a></li>
+
+                    </ul>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+<div class="fn-footer-bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h6 style="color: white;font-size: 11px; text-align: center;">Copyright © 2021 SRBS BHARTIYA AIRWAYS SERVICES PRIVATE LIMITED</h6>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+</div>
+<script>
+
+
+
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="static\js\custom.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- sweet alart -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9">
+</script>
+<script src="https://unpkg.com/boxicons@2.1.1/dist/boxicons.js"></script>
+<!-- sweet alart -->
+</body>
+
+</html>

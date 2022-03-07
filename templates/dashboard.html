@@ -1,0 +1,119 @@
+{% extends 'dashboard_base.html' %} {% block body%}
+<!-- ============================================================== -->
+<!-- End Left Sidebar - style you can find in sidebar.scss  -->
+<!-- ============================================================== -->
+<!-- ============================================================== -->
+<!-- Page wrapper  -->
+<!-- ============================================================== -->
+<div class="page-wrapper">
+  <!-- ============================================================== -->
+  <!-- Three charts -->
+  <!-- ============================================================== -->
+  <div class="row justify-content-center">
+    <a href="/today">
+    <div class="col-lg-4 col-md-12">
+      <div class="white-box analytics-info">
+        <h3 class="box-title">Total</h3>
+        <ul class="list-inline two-part d-flex align-items-center mb-0">
+          <li>
+            <div id="sparklinedash">
+              <canvas
+                width="67"
+                height="30"
+                style="
+                  display: inline-block;
+                  width: 67px;
+                  height: 30px;
+                  vertical-align: top;
+                "
+              ></canvas>
+            </div>
+          </li>
+          <li class="ms-auto">
+            <span class="counter text-success">{{data2}}</span>
+          </li>
+        </ul>
+      </div>
+    </a>
+    </div>
+    <div class="col-lg-4 col-md-12">
+      <a href="/datatable">
+        <div class="white-box analytics-info">
+          <h3 class="box-title">Today</h3>
+          <ul class="list-inline two-part d-flex align-items-center mb-0">
+            <li>
+              <div id="sparklinedash2">
+                <canvas
+                  width="67"
+                  height="30"
+                  style="
+                    display: inline-block;
+                    width: 67px;
+                    height: 30px;
+                    vertical-align: top;
+                  "
+                ></canvas>
+              </div>
+            </li>
+            <li class="ms-auto">
+              <span class="counter text-purple">{{data}}</span>
+            </li>
+          </ul>
+        </div>
+      </a>
+    </div>
+    <div class="col-lg-4 col-md-12">
+      <a href="/month">
+        <div class="white-box analytics-info">
+          <h3 class="box-title">Month</h3>
+          <ul class="list-inline two-part d-flex align-items-center mb-0">
+            <li>
+              <div id="sparklinedash3">
+                <canvas
+                  width="67"
+                  height="30"
+                  style="
+                    display: inline-block;
+                    width: 67px;
+                    height: 30px;
+                    vertical-align: top;
+                  "
+                ></canvas>
+              </div>
+            </li>
+            <li class="ms-auto">
+              <span class="counter text-info">{{data_monthC}}</span>
+            </li>
+          </ul>
+        </div>
+      </a>
+    </div>
+    <div class="col-lg-4 col-md-12">
+      <a href="/week">
+        <div class="white-box analytics-info">
+          <h3 class="box-title">week</h3>
+          <ul class="list-inline two-part d-flex align-items-center mb-0">
+            <li>
+              <div id="sparklinedash3">
+                <canvas
+                  width="67"
+                  height="30"
+                  style="
+                    display: inline-block;
+                    width: 67px;
+                    height: 30px;
+                    vertical-align: top;
+                  "
+                ></canvas>
+              </div>
+            </li>
+            <li class="ms-auto">
+              <span class="counter text-info">{{data_monthC}}</span>
+            </li>
+          </ul>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+{% endblock %}

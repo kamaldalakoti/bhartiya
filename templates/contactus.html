@@ -1,0 +1,127 @@
+
+</style>
+{% extends 'base.html' %}
+{% block body %}
+<div class="ttm-page-title-row">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title-box ttm-textcolor-white">
+                    <div class="page-title-heading">
+                        <h1 class="title">Contact Us</h1>
+                    </div><!-- /.page-title-captions -->
+                    <div class="breadcrumb-wrapper">
+                        <span>
+                            &nbsp;&nbsp;Home
+                        </span>
+                        <span class="ttm-bread-sep">&nbsp; | &nbsp;</span>
+                        <span>Contact Us</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="mt-5 mt-3">
+
+    <div class=" map-section clearfix">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <div class="map-wrapper">
+                        <div id="map_canvas"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="contact-form-section clearfix  ">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 padding-bottom">
+                    <div class="spacing-6 clearfix">
+
+                        <div class="section-title clearfix">
+                            <div class="title-header">
+                                <h3 class="title"> <strong> HOW TO FIND US </strong></h3>
+                                <p>If you have any questions, just fill in the contact form, and we will answer you
+                                    shortly. If you are living nearby, come visit us.</p>
+                            </div>
+                        </div>
+                        <ul class="ttm_contact_widget_wrapper padding-top2">
+                            <li>
+                                <h6 class="fw-bold">Address</h6>
+
+                                <span>H-64, sector-63, Noida, Uttar Pradesh 201301</span>
+                            </li>
+                            <hr>
+                            <li>
+                                <h6 class="fw-bold">Email</h6>
+                                <span><a href="mailto:info@bhartiyaairways.com">info@bhartiyaairways.com</a></span>
+                            </li>
+                            <hr>
+                            <li>
+                                <h6 class="fw-bold">Toll Free Number</h6>
+                                <span>+91-9204044044</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 my-3">
+                    <div class="map-col-bg ttm-bgcolor-skincolor spacing-7">
+
+                        <div class="section-title with-desc clearfix">
+                            <div class="title-header">
+                                <h2 class="title text-light">Let’s Start <br> The Conversation.</h2><br>
+                            </div>
+                        </div>
+                        <form id="ttm-contactform" class="ttm-contactform wrap-form clearfix" method="post" >
+                        {% csrf_token %}
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label text-light">Name</label>
+                                        <input type="text" class="form-control" name='Name' placeholder="Your Name" required="required">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput2" class="form-label text-light">Email address</label>
+                                        <input type="email" class="form-control" name='Email' placeholder="Your Email" required="required">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput2" class="form-label text-light">Your Phone</label>
+                                        <input type="text" class="form-control" minlength="10" name='Phone' maxlength="10" value="" placeholder="Your Phone" required="required">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput2" class="form-label text-light">Subject</label>
+                                        <input class="form-control" type="text" value="" name='Subject' placeholder="Subject" required="required">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label text-light">Message</label>
+                                <textarea class="form-control" name='Message' cols="40" rows="3" placeholder="Message" required="required"></textarea>
+                            </div>
+                            <input type="submit" name="submit" id="submit" class="submit ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-btn-bgcolor-darkgrey" value="Submit">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+
+
+{% endblock %}

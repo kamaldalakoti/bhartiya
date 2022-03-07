@@ -1,0 +1,207 @@
+
+<html lang="en">
+  <head>
+    <title>Bhartiya Airways Apply Form</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/ico" href="img/Logo1.png" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link href="css/form.css" rel="stylesheet" />
+    <script src="https://connect.facebook.net/signals/config/555392592486789?v=2.9.44&amp;r=stable" async=""></script>
+    <script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script>
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+      fbq("init", "555392592486789");
+      fbq("track", "PageView");
+    </script>
+    <noscript><img height="1" width="1" style="display: none" src="https://www.facebook.com/tr?id=555392592486789&ev=PageView&noscript=1" /></noscript>
+    <style type="text/css">
+      body {
+        padding: 10px;
+        font-family: Arial;
+        font-size: 10pt;
+      }
+      span {
+        font-weight: bold;
+      }
+
+      .san {
+        height: 26px;
+        width: 250px;
+        border: 1px solid #9e9e9e;
+        padding: 5px;
+        border-radius: 5px;
+        margin: 10px;
+      }
+      .card-header {
+        padding: 0.75rem 1.25rem;
+        margin-bottom: 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+        background-color: #6666662f;
+      }
+      .card {
+        background-color: #f2f2f254;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      }
+      .card-header h4 {
+        color: #fff;
+        font-weight: 700;
+        font-size: 40px;
+        text-transform: uppercase;
+      }
+      .card-header p {
+        font-family: arial;
+        text-align: center;
+        font-size: 14px;
+        color: #fff;
+      }
+      .container .card {
+        border: none;
+        border-radius: 0;
+        margin: 40px 0;
+      }
+      .form-control {
+        border-radius: 50px;
+        height: 48px;
+      }
+      .btn {
+        background-color: crimson;
+        border: none;
+        color: #fff;
+        width: 50%;
+        border-radius: 100px;
+        position: relative;
+        left: 25%;
+        height: 50px;
+        font-weight: 700;
+      }
+      .btn:hover {
+        background-color: #350b9a;
+        border: none;
+        color: #fff;
+        width: 50%;
+        border-radius: 100px;
+        position: relative;
+        left: 25%;
+        height: 50px;
+        font-weight: 700;
+      }
+      
+    </style>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+  </head>
+  <body style="background-image: url('./static/images/apply-form.webp'); background-size: cover">
+    {% load sweetify %}
+{% sweetify %}
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 mx-auto">
+          <div class="card rounded gradient-border">
+            <div class="card-header">
+              <div class="row">
+                <div class="col-md-1">
+                  <img src="static/images/logo.webp" alt="" width="120" />
+                </div>
+                <div class="col-md-11">
+                  <h4 class="text-center">Apply Now</h4>
+                  <p>Fields marked with (*) are mandatory</p>
+                  <p id="error-mobile"></p>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <form  method="post" >
+              {% csrf_token %}
+                <div class="row">
+                  <div class="form-group col-6">
+                    <input type="text" name="name" id="name" class="form-control" placeholder="*Enter Name" required="" />
+                  </div>
+                  <div class="form-group col-6">
+                    <input type="email" name="email" id="email" class="form-control" placeholder="*Enter Email Id" required="" />
+                  </div>
+                  <div class="form-group col-6">
+                    <input type="text" name="mobile" id="txtPhone" minlength="10" maxlength="10" class="form-control" placeholder="*Enter Mobile No" />
+                    <span id="spnPhoneStatus"></span>
+                  </div>
+                  <div class="form-group col-6">
+                    <input type="text" name="address" id="address" class="form-control" placeholder="*Address" required="" />
+                  </div>
+                  <div class="form-group col-6">
+                    <input type="text" name="city" id="city" class="form-control" placeholder="*City" required="" />
+                  </div>
+                  <div class="form-group col-6">
+                    <input type="text" name="state" id="state" class="form-control" placeholder="* State" required="" />
+                  </div>
+                  <div class="form-group col-md-6">
+                    <select class="form-control" name="reference" id="reference">
+                      <option>Select Reference</option>
+                      <option>Website</option>
+                      <option>Facebook</option>
+                      <option>Instagram</option>
+                      <option>Youtube</option>
+                      <option>Others</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <input type="file" class="form-control" name='CV' id="resume"/>
+                  </div>
+
+                  <div class="form-group col-md-6">
+                    <div class="form-check">
+                      <label class="form-check-label"> <input class="form-check-input" type="checkbox" name="trm" value="I agree your terms & conditions" required="" /> I Accept the term and condition </label>
+                    </div>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <button type="submit" name="submit_btn" class="btn mt-3">Apply Now</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $(window).load(function () {
+        $(document).ready(function () {
+          $("#txtPhone").blur(function (e) {
+            if (validatePhone("txtPhone")) {
+              $("#spnPhoneStatus").html("Valid Mobile Number");
+              $("#spnPhoneStatus").css("color", "green");
+            } else {
+              $("#spnPhoneStatus").html("Invalid Mobile Number");
+              $("#spnPhoneStatus").css("color", "red");
+            }
+          });
+        });
+        function validatePhone(txtPhone) {
+          var a = document.getElementById(txtPhone).value;
+          var filter = /[1-9]{1}[0-9]{9}/;
+          if (filter.test(a)) {
+            return true;
+          } else {
+            return false;
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
